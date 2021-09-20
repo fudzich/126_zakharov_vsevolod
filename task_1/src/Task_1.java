@@ -1,19 +1,74 @@
 public class Task_1 implements Task_1_base {
     @Override
-    public int subtask_1_if(int first, int second, int third) {
+    public int subtask_1_if(int first, int second, int third)
+    {
+        if((first < second) && (first < third))
+        {
+            return(first);
+        }
+        else if((second < first) && (second < third))
+        {
+            return(second);
+        }
+        else
+        {
+            return(third);
+        }
         // Вычислить и вернуть минимальный из трех полученных аргументов (first, second, third)
         // ------------------------------------------------------------------------------------
-        return 0; // Замените данный оператор кодом, решающим поставленную задачу.
+        //return 0; // Замените данный оператор кодом, решающим поставленную задачу.
     }
+
     @Override
-    public boolean subtask_2_if(int year) {
+    public boolean subtask_2_if(int year)
+    {
+        if((year % 4 == 0) && (year % 100 != 0))
+        {
+            return true;
+        }
+        else if (year % 400 == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
         // Проверить, является ли год, переданный в параметре year, високосным.
         // Високосный год - это год, кратный четырем, но не кратный 100, либо кратный 400
         // ------------------------------------------------------------------------------------
-        return false; // Замените данный оператор кодом, решающим поставленную задачу.
+        //return false; // Замените данный оператор кодом, решающим поставленную задачe.
     }
     @Override
-    public int subtask_3_if(double x, double y, double left_up_x, double left_up_y, double width, double height) {
+    public int subtask_3_if(double x, double y, double left_up_x, double left_up_y, double width, double height)
+    {
+        if((width <= 0 ) || (height <= 0) || (width != height))
+        {
+            return 2;
+        }
+        else if((x <= left_up_x) && (y >= left_up_y))
+        {
+            return 0;
+        }
+        else
+        {
+            double right_up_x = left_up_x + width;
+            //double right_up_y = left_up_y + width;
+            //double left_down_x = left_up_x + height;
+            double left_down_y = left_up_y + width;
+
+            if((x < right_up_x))// && (y < right_up_y))
+            {
+                if((y > left_down_y))// && (x < left_down_x))
+                {
+                    return 1;
+                }
+            }
+            else
+            {
+                return 0;
+            }
+        }
         // Проверить, лежит ли точка с координатами (x, y) внутри невырожденного квадрата
         // со сторонами, параллельными осям координат, левый верхний угол которого имеет
         // координаты (left_up_x, left_up_y), ширина которого width, высота height.
@@ -39,15 +94,48 @@ public class Task_1 implements Task_1_base {
         return 0; // Замените данный оператор кодом, решающим поставленную задачу.
     }
     @Override
-    public String subtask_5_switch(int day_od_week) {
+    public String subtask_5_switch(int day_od_week)
+    {
+        switch (day_od_week)
+        {
+            case 1:
+                return "Понедельник";
+            case 2:
+                return "Вторник";
+            case 3:
+                return "Среда";
+            case 4:
+                return "Четверг";
+            case 5:
+                return "Пятница";
+            case 6:
+                return "Суббота";
+            case 7:
+                return "Воскресенье";
+            default:
+                return "Ошибка";
+        }
         // По номеру дня недели day_od_week вернуть его название на русском языке, записанное
         // с большой буквы. Дни едели отсчитываются с единицы. Если номер задан некорректно,
         // вернуть строку "Ошибка"
         // ------------------------------------------------------------------------------------
-        return ""; // Замените данный оператор кодом, решающим поставленную задачу.
+        //return ""; // Замените данный оператор кодом, решающим поставленную задачу.
     }
     @Override
     public String subtask_6_switch(int direction) {
+        switch (direction)
+        {
+            case 1:
+                return "север";
+            case 2:
+                return "юг";
+            case 3:
+                return "запад";
+            case 4:
+                return "восток";
+            default:
+                return "";
+        }
         // По заданному направлению direction вернуть его название:
         // 1 - север
         // 2 - юг
@@ -55,7 +143,7 @@ public class Task_1 implements Task_1_base {
         // 4 - восток
         // Во всех остальных случаях вернуть пустую строку
         // ------------------------------------------------------------------------------------
-        return ""; // Замените данный оператор кодом, решающим поставленную задачу.
+        //return ""; // Замените данный оператор кодом, решающим поставленную задачу.
     }
     @Override
     public int subtask_7_if(double vx, double vy, double vz, double speed, double time, double wall) {
