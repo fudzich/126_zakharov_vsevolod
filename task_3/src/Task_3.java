@@ -2,14 +2,30 @@ public class Task_3 implements Task_3_base {
     @Override
     public int subtask_1_for(int n1, int n2, int a, int b) {
         int counter = 0;
-        for(int i = n1; i <= n2; i++)
+        if (n1 < n2) {
+            for (int i = n1; i <= n2; i++) {
+                if ((i % a == 0) && (i % b != 0)) {
+                    counter++;
+                }
+            }
+            return counter;
+        }
+        else if (n1 > n2)
         {
-            if((i % a == 0) && ( i % b !=0))
-            {
+            for (int i = n2; i <= n1; i++) {
+                if ((i % a == 0) && (i % b != 0)) {
+                    counter++;
+                }
+            }
+            return counter;
+        }
+        else
+        {
+            if ((n1 % a == 0) && (n1 % b != 0)) {
                 counter++;
             }
+            return counter;
         }
-        return counter;
         // подсчитать, сколько чисел, кратных a, но не кратных b,
         // находится между числами n1 и n2 включительно
         //return 0;
@@ -17,10 +33,14 @@ public class Task_3 implements Task_3_base {
 
     @Override
     public int subtask_2_for(int num) {
-        for(int i = 1; i <= num; i++)
+        int k = 1;
+        int b = 0;
+        while (b < num)
         {
-            double posled = i + i * Math.pow(10,i-1);
+            b = b + k;
+            k++;
         }
+        return (k-1);
         // Последовательность чисел строится следующим образом:
         // сначала идет одна единица,
         // потом две двойки,
@@ -30,7 +50,7 @@ public class Task_3 implements Task_3_base {
         // ...
         // Найти, какое число будет находиться в этой последовательности
         // на позиции num
-        return 0;
+        //return 0;
     }
 
     @Override
