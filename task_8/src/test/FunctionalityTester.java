@@ -31,13 +31,13 @@ public class FunctionalityTester {
             case "task.BattleUnit", "task.BattleUnitBase" -> true;
 
             //Раскомментируйте строку ниже, если сделали подзадачу 3
-            //case "task.Infantryman" -> testInfantryman();
+            case "task.Infantryman" -> testInfantryman();
 
             //Раскомментируйте строку ниже, если сделали подзадачу 4
-            //case "task.ArmorDestroyer" -> testArmorDestroyer();
+            case "task.ArmorDestroyer" -> testArmorDestroyer();
 
             //Раскомментируйте строку ниже, если сделали подзадачу 5
-            //case "task.Alchemist" -> testAlchemist();
+            case "task.Alchemist" -> testAlchemist();
 
             default -> false;
         };
@@ -50,7 +50,7 @@ public class FunctionalityTester {
 
 
     //Раскомментируйте следующий метод, если сделали подзадачу 3
-    /*
+
     private boolean testInfantryman() {
         Infantryman infantryman = new Infantryman("inf 1", 100, 20, 50);
         writeProto(infantryman.name().equals("inf 1"));
@@ -131,10 +131,10 @@ public class FunctionalityTester {
 
         return allOk;
     }
-    */
+
 
     //Раскомментируйте следующий метод, если сделали подзадачу 4
-    /*
+
     private boolean testArmorDestroyer() {
         ArmorDestroyer ad = new ArmorDestroyer("ad 1", 100, 20, 50);
         Infantryman enemy = new Infantryman("enemy", 100, 10, 50);
@@ -212,10 +212,10 @@ public class FunctionalityTester {
 
         return allOk;
     }
-    */
+
 
     //Раскомментируйте следующий метод, если сделали подзадачу 5
-    /*
+
     private boolean testAlchemist() {
         Alchemist alchemist = new Alchemist("al 1", 100, 10, 20);
         Infantryman enemy = new Infantryman("inf 1", 100, 10, 20);
@@ -276,5 +276,5 @@ public class FunctionalityTester {
 
         return allOk;
     }
-    */
+
 }
