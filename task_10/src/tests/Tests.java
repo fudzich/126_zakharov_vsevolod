@@ -13,7 +13,7 @@ public class Tests extends Assert {
 
     @Test
     public void Payment_ChosePaymentGetType_PaymentTypeEqualsOne(){
-        Payment payment = new Payment(1);
-        assertEquals(1, payment.GetType());
+        Payment payment = new Payment(true);
+        assertEquals(true, payment.GetType());
     }
 }
