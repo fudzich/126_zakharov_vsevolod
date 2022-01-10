@@ -12,8 +12,13 @@ public class Tests extends Assert {
     }
 
     @Test
-    public void Payment_ChosePaymentGetType_PaymentTypeEqualsOne(){
+    public void Payment_ChosePaymentType_PaymentTypeEqualsOne(){
         Payment payment = new Payment(true);
         assertEquals(true, payment.GetType());
+    }
+    @Test
+    public void Payment_ChosePaymentType_PaymentTypeEqualsZero(){
+        Payment payment = new Payment(false);
+        assertEquals(false, payment.GetType());
     }
 }
