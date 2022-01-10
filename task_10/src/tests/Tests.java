@@ -2,6 +2,7 @@ package tests;
 
 import org.junit.*;
 import  core.*;
+import ProgramRun.Run;
 
 public class Tests extends Assert {
 
@@ -26,5 +27,9 @@ public class Tests extends Assert {
     public void Payment_CreatePaymentWithTotalPlusNumberPlusTypePlusDogovorNumberPlusDate_PaymentAmmountEqualsOne(){
         Payment payment = new Payment(100, 1, true, "1", "20211030");
         assertEquals(1, payment.GetAmmount());
+    }
+    @Test
+    public void Main_SearchAllPaymentsViaDogovor_(){
+
     }
 }
