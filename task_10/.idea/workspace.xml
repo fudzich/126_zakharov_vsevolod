@@ -42,7 +42,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.Tests.Payment_CreatePaymentWithTotalPlusNumberPlusTypePlusDogovorNumberPlusDate_PaymentAmmountEqualsOne">
+  <component name="RunManager" selected="JUnit.Tests">
     <configuration name="Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="task_10" />
       <extension name="coverage">
@@ -124,9 +124,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Tests" />
         <item itemvalue="JUnit.Tests.Payment_CreatePaymentWithTotalPlusNumberPlusTypePlusDogovorNumberPlusDate_PaymentAmmountEqualsOne" />
         <item itemvalue="JUnit.Tests.Payment_ChosePaymentType_PaymentTypeEqualsZero" />
-        <item itemvalue="JUnit.Tests" />
         <item itemvalue="JUnit.Tests.Payment_ChosePaymentGetType_PaymentTypeEqualsOne" />
         <item itemvalue="JUnit.Tests.DogovorVault_AddNewDogovor_DogovorAmmountEquelsOne" />
       </list>
