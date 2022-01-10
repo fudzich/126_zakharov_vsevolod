@@ -21,4 +21,10 @@ public class Tests extends Assert {
         Payment payment = new Payment(false);
         assertEquals(false, payment.GetType());
     }
+
+    @Test
+    public void Payment_CreatePaymentWithTotalPlusNumberPlusTypePlusDogovorNumberPlusDate_PaymentAmmountEqualsOne(){
+        Payment payment = new Payment(100, 1, true, "1", "20211030");
+        assertEquals(1, payment.GetAmmount());
+    }
 }
