@@ -6,8 +6,14 @@ import  core.*;
 public class Tests extends Assert {
 
     @Test
-    public void DogovorVault_AddNewDogovor_DogovorAmmountEquelsOne(){
+    public void Dogovor_AddNewDogovor_DogovorAmmountEqualsOne(){
         Dogovor dogovor = new Dogovor("1","20211114");
         assertEquals(1, dogovor.getDogovorAmmount());
+    }
+
+    @Test
+    public void Payment_ChosePaymentGetType_PaymentTypeEqualsOne(){
+        Payment payment = new Payment(1);
+        assertEquals(1, payment.GetType());
     }
 }
