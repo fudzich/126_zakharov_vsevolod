@@ -30,11 +30,4 @@ public class Tests extends Assert {
         Payment payment = new Payment(100, 1, true, "1", "20211030");
         assertEquals(1, payment.GetAmmount());
     }
-//    @Test
-//    public void AddDogovor_AddNewDogovorToTheList_ListSizeEqualsOne(){
-//        ArrayList <Dogovor> test = new ArrayList<>();
-//        Run run = new Run();
-//        run.addDogovor(test);
-//        assertEquals(1,test.size());
-//    }
 }

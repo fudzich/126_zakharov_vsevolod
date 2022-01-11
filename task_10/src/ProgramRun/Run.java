@@ -33,17 +33,31 @@ public class Run {
                     "5 - Удаление платежей с заданным номером, номером договора и датой\n" +
                     "6 - Получение списка всех договоров с их суммарными суммами платежей\n" +
                     "7 - Получение списка всех платежей\n" +
-                    "8 - Показать список договоров\n" +
-                    "9 - Показать список платежей\n");
+                    "8 - Получение списка всех договоров\n");
             i = sc.nextInt();
             switch (i) {
-                case 1-> ListOfDogovors = addDogovor(ListOfDogovors);
+                case 1 -> ListOfDogovors = addDogovor(ListOfDogovors);
                 case 2 -> ListOfPayments = addPayment(ListOfPayments);
                 case 3 -> searchPaymentsViaDogovor(ListOfPayments);
+                case 4 -> findTotalPaymentViaDogovor(ListOfPayments);
+                case 5 -> ListOfPayments = deletePaymentViaNumberDNumberAndDate(ListOfPayments);
                 case 8 -> showListOfDogovors(ListOfDogovors);
-                case 9 -> showListOfPayments(ListOfPayments);
+                case 7 -> showListOfPayments(ListOfPayments);
             }
         }
+    }
+
+
+
+    private static void findTotalPaymentViaDogovor(ArrayList<Payment> listOfPayments) {
+        String dNumber = AddDogovorNumber();
+        int sum = 0;
+        for(int i=0;i<listOfPayments.size();i++){
+            if(listOfPayments.get(i).GetDogovorNumber().contains(dNumber)){
+                sum = sum + listOfPayments.get(i).GetTotal();
+            }
+        }
+        System.out.println("Сумма платежей по этому договору = "+sum);
     }
 
     private static void showListOfPayments(ArrayList<Payment> listOfPayments) {
@@ -84,7 +98,7 @@ public class Run {
     private static String AddDogovorNumber(){
         String number;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите номера договора");
+        System.out.println("Введите номер договора");
         number = sc.nextLine();
         return number;
     }
@@ -107,14 +121,6 @@ public class Run {
         ListOfPayments.add(payment);
         return ListOfPayments;
     }
-
-//    private static void VvodPayment(int total, int number, boolean type, String dogovorNumber, String date){
-//        //VvodPaymentTotal(total);
-//        VvodPaymentNumber(number);
-//        VvodPaymentType(type);
-//        VvodPaymentDogovorNumber(dogovorNumber);
-//        VvodPaymentdate(date);
-//    }
 
     private static String VvodPaymentdate() {
         String date;
