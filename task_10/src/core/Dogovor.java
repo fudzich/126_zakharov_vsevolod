@@ -17,4 +17,10 @@ public class Dogovor {
     public int getDogovorAmmount(){
         return ammount;
     }
+    public String GetNumber(){
+        return number;
+    }
+    public String GetDate(){
+        return date;
+    }
 }

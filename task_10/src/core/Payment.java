@@ -25,8 +25,19 @@ public class Payment {
     public boolean GetType(){
         return type;
     }
-
     public int GetAmmount(){
         return ammount;
+    }
+    public String GetDogovorNumber(){
+        return dogovorNumber;
+    }
+    public int GetNumber(){
+        return number;
+    }
+    public int GetTotal(){
+        return total;
+    }
+    public String GetDate(){
+        return date;
     }
 }
