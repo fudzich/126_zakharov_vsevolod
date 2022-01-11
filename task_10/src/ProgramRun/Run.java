@@ -17,13 +17,10 @@ public class Run {
     public static void main(String[] args){
         ArrayList<Dogovor> ListOfDogovors = new ArrayList<>();
         ArrayList<Payment> ListOfPayments = new ArrayList<>();
-        int pNumber, total;
-        boolean type;
-        String dNumber, date;
-        menu(ListOfDogovors, ListOfPayments, pNumber, total, type, dNumber,date);
+        menu(ListOfDogovors, ListOfPayments);
     }
 
-    public static void menu (ArrayList<Dogovor> ListOfDogovors, ArrayList<Payment> ListOfPayments, int pNumber, int total, boolean type, String dNumber, String date){
+    public static void menu (ArrayList<Dogovor> ListOfDogovors, ArrayList<Payment> ListOfPayments){
         int i = 1;
         Scanner sc = new Scanner(System.in);
         while(i!= 0) {
@@ -40,8 +37,8 @@ public class Run {
                     "9 - Показать список платежей\n");
             i = sc.nextInt();
             switch (i) {
-                case 1-> addDogovor(ListOfDogovors);
-                case 2 -> addPayment(ListOfPayments);
+                case 1-> ListOfDogovors = addDogovor(ListOfDogovors);
+                case 2 -> ListOfPayments = addPayment(ListOfPayments);
                 case 3 -> searchPaymentsViaDogovor(ListOfPayments);
                 case 8 -> showListOfDogovors(ListOfDogovors);
                 case 9 -> showListOfPayments(ListOfPayments);
@@ -67,8 +64,7 @@ public class Run {
     }
 
     public static void searchPaymentsViaDogovor(ArrayList <Payment> ListOfPayments){
-        //String dNumber="";
-        AddDogovorNumber(dNumber);
+        String dNumber = AddDogovorNumber();
         System.out.println("Номера всех платежей по договору:\n");
         for(int i=0;i<ListOfPayments.size();i++){
             if(ListOfPayments.get(i).GetDogovorNumber().contains(dNumber)){
@@ -77,52 +73,65 @@ public class Run {
         }
     }
 
-    public static void addDogovor(ArrayList <Dogovor> ListOfDogovors){
-        //String dNumber="";
-        AddDogovorNumber(dNumber);
-        //String date="";
-        AddDogovorDate(date);
+    public static ArrayList addDogovor(ArrayList <Dogovor> ListOfDogovors){
+        String dNumber = AddDogovorNumber();
+        String date = AddDogovorDate();
         Dogovor dogovor = new Dogovor(dNumber, date);
         ListOfDogovors.add(dogovor);
+        return ListOfDogovors;
     }
 
-    private static void AddDogovorNumber(String number){
+    private static String AddDogovorNumber(){
+        String number;
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите номера договора");
         number = sc.nextLine();
+        return number;
     }
-    private static void AddDogovorDate(String date){
+    private static String AddDogovorDate(){
+        String date;
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите дату договора");
         date = sc.nextLine();
+        return date;
     }
 
-    public static void addPayment(ArrayList <Payment> ListOfPayments){
-        //int total=1, pNumber=2; boolean type=true; String dogovorNumber="", date="";
-        VvodPayment(total,pNumber,type,dogovorNumber,date);
+    public static ArrayList addPayment(ArrayList <Payment> ListOfPayments){
+        int total = VvodPaymentTotal();
+        int pNumber = VvodPaymentNumber();
+        boolean type = VvodPaymentType();
+        String dogovorNumber = VvodPaymentDogovorNumber();
+        String date = VvodPaymentdate();
+        //VvodPayment(total,pNumber,type,dogovorNumber,date);
         Payment payment = new Payment(total, pNumber, type, dogovorNumber, date);
         ListOfPayments.add(payment);
+        return ListOfPayments;
     }
 
-    private static void VvodPayment(int total, int number, boolean type, String dogovorNumber, String date){
-        VvodPaymentTotal(total);
-        VvodPaymentNumber(number);
-        VvodPaymentType(type);
-        VvodPaymentDogovorNumber(dogovorNumber);
-        VvodPaymentdate(date);
-    }
+//    private static void VvodPayment(int total, int number, boolean type, String dogovorNumber, String date){
+//        //VvodPaymentTotal(total);
+//        VvodPaymentNumber(number);
+//        VvodPaymentType(type);
+//        VvodPaymentDogovorNumber(dogovorNumber);
+//        VvodPaymentdate(date);
+//    }
 
-    private static void VvodPaymentdate(String date) {
+    private static String VvodPaymentdate() {
+        String date;
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите дату платежа");
         date = sc.nextLine();
+        return date;
     }
-    private static void VvodPaymentDogovorNumber(String dogovorNumber) {
+    private static String VvodPaymentDogovorNumber() {
+        String dogovorNumber;
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите номер договора платежа");
         dogovorNumber = sc.nextLine();
+        return dogovorNumber;
     }
-    private static void VvodPaymentType(boolean type) {
+    private static boolean VvodPaymentType() {
+        boolean type = true;
         Scanner sc = new Scanner(System.in);
         boolean oneOrTwo = false;
         while(oneOrTwo == false) {
@@ -138,16 +147,21 @@ public class Run {
                 oneOrTwo = true;
             }
         }
+        return type;
     }
-    private static void VvodPaymentTotal(int total){
+    private static int VvodPaymentTotal(){
+        int total;
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите сумму платежа");
         total = sc.nextInt();
+        return total;
     }
-    private static void VvodPaymentNumber(int number){
+    private static int VvodPaymentNumber(){
+        int number;
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите номер платежа");
         number = sc.nextInt();
+        return number;
     }
 
 
