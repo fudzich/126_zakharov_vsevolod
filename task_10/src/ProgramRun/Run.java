@@ -1,12 +1,9 @@
 package ProgramRun;
 import core.*;
 
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
-import java.util.SortedMap;
 
 public class Run {
 
@@ -41,23 +38,48 @@ public class Run {
                 case 3 -> searchPaymentsViaDogovor(ListOfPayments);
                 case 4 -> findTotalPaymentViaDogovor(ListOfPayments);
                 case 5 -> ListOfPayments = deletePaymentViaNumberDNumberAndDate(ListOfPayments);
+                case 6 -> showListOfDogovorsWithTotalPayments(ListOfDogovors, ListOfPayments);
                 case 8 -> showListOfDogovors(ListOfDogovors);
                 case 7 -> showListOfPayments(ListOfPayments);
             }
         }
     }
 
+    private static void showListOfDogovorsWithTotalPayments(ArrayList<Dogovor> listOfDogovors, ArrayList<Payment> listOfPayments) {
+        for(int i =0; i < listOfDogovors.size(); i++){
+            System.out.println("Договор "+listOfDogovors.get(i).GetNumber()+" : ");
+            findTotalPaymentViaDogovorWithoutConsole(listOfDogovors.get(i).GetNumber(), listOfPayments);
+        }
+    }
 
+    private static ArrayList<Payment> deletePaymentViaNumberDNumberAndDate(ArrayList<Payment> listOfPayments) {
+        int paymentNumber = VvodPaymentNumber();
+        String dogovorNumber = AddDogovorNumber();
+        String date = VvodPaymentdate();
+        for(int i=0;i<listOfPayments.size();i++){
+            //Payment pay = listOfPayments.get(i);
+            if((listOfPayments.get(i).GetDogovorNumber().equals(dogovorNumber)) && (listOfPayments.get(i).GetNumber() == paymentNumber) &&
+                    (listOfPayments.get(i).GetDate().equals(date))){
+                listOfPayments.remove(i);
+            }
+        }
+        return listOfPayments;
+    }
 
-    private static void findTotalPaymentViaDogovor(ArrayList<Payment> listOfPayments) {
-        String dNumber = AddDogovorNumber();
+    private static void findTotalPaymentViaDogovorWithoutConsole(String dNumber, ArrayList<Payment> listOfPayments){
         int sum = 0;
         for(int i=0;i<listOfPayments.size();i++){
-            if(listOfPayments.get(i).GetDogovorNumber().contains(dNumber)){
+            if(listOfPayments.get(i).GetDogovorNumber().equals(dNumber)){
                 sum = sum + listOfPayments.get(i).GetTotal();
             }
         }
-        System.out.println("Сумма платежей по этому договору = "+sum);
+        System.out.println("Сумма платежей по этому договору = "+sum+"\n");
+
+    }
+
+    private static void findTotalPaymentViaDogovor(ArrayList<Payment> listOfPayments) {
+        String dNumber = AddDogovorNumber();
+        findTotalPaymentViaDogovorWithoutConsole(dNumber, listOfPayments);
     }
 
     private static void showListOfPayments(ArrayList<Payment> listOfPayments) {
@@ -81,7 +103,7 @@ public class Run {
         String dNumber = AddDogovorNumber();
         System.out.println("Номера всех платежей по договору:\n");
         for(int i=0;i<ListOfPayments.size();i++){
-            if(ListOfPayments.get(i).GetDogovorNumber().contains(dNumber)){
+            if(ListOfPayments.get(i).GetDogovorNumber().equals(dNumber)){
                 System.out.println(ListOfPayments.get(i).GetNumber() + "\n");
             }
         }
