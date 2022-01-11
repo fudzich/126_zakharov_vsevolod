@@ -4,6 +4,8 @@ import org.junit.*;
 import  core.*;
 import ProgramRun.Run;
 
+import java.util.ArrayList;
+
 public class Tests extends Assert {
 
     @Test
@@ -29,7 +31,10 @@ public class Tests extends Assert {
         assertEquals(1, payment.GetAmmount());
     }
     @Test
-    public void Main_SearchAllPaymentsViaDogovor_(){
-
+    public void AddDogovor_AddNewDogovorToTheList_ListSizeEqualsOne(){
+        ArrayList <Dogovor> test = new ArrayList<>();
+        Run run = new Run();
+        run.addDogovor(test);
+        assertEquals(1,test.size());
     }
 }

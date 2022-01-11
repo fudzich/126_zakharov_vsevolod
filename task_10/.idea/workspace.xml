@@ -71,7 +71,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tests.Payment_ChosePaymentType_PaymentTypeEqualsZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Tests.AddDogovor_AddNewDogovorToTheList_ListSizeEqualsOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="task_10" />
       <extension name="coverage">
         <pattern>
@@ -81,7 +81,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.Tests" />
-      <option name="METHOD_NAME" value="Payment_ChosePaymentType_PaymentTypeEqualsZero" />
+      <option name="METHOD_NAME" value="AddDogovor_AddNewDogovorToTheList_ListSizeEqualsOne" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,10 +122,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Run" />
+        <item itemvalue="JUnit.Tests.AddDogovor_AddNewDogovorToTheList_ListSizeEqualsOne" />
         <item itemvalue="JUnit.Tests.test" />
         <item itemvalue="JUnit.Tests" />
         <item itemvalue="JUnit.Tests.Payment_CreatePaymentWithTotalPlusNumberPlusTypePlusDogovorNumberPlusDate_PaymentAmmountEqualsOne" />
-        <item itemvalue="JUnit.Tests.Payment_ChosePaymentType_PaymentTypeEqualsZero" />
       </list>
     </recent_temporary>
   </component>
@@ -150,5 +150,20 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/core/Payment.java</url>
+          <line>28</line>
+          <properties class="core.Payment" method="GetAmmount">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
