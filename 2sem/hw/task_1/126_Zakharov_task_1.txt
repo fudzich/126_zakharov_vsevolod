@@ -11,3 +11,15 @@ DynamicArray | 56 | data[capacity] = value; -> data[size] = value; | pushBack_Va
 DynamicArray | 52 | if(capacity < size) { -> if(capacity <= size) { | pushBack_ValueEqualsThree_ValueIsPushedToTheBack
 DynamicArray | 60 | if(size < 0) -> if(size <= 0) | popBack_SizeEqualsZero_MessageIsThrown
 DynamicArray | 66 | if(index < 0 || index > size) -> if(index < 0 || index >= size)
+Node | 13 | this.next = prev; -> this.next = next; | pushFront_PushFrontToNotEmptyList_DataIsPushed
+Node | 14 | this.prev = next; -> this.prev = prev; | pushFront_PushFrontToNotEmptyList_DataIsPushed
+DoubleLinkedList | 17 | return dummy.getPrev(); -> return dummy.getNext(); | pushFront_PushFrontToNotEmptyList_DataIsPushed
+DoubleLinkedList | 20 | return dummy.getNext(); -> return dummy.getPrev(); | pushFront_PushFrontToNotEmptyList_DataIsPushed
+DoubleLinkedList | 41 | return insertBefore(getTail(), data); -> return insertAfter(getTail(), data); | pushFront_PushFrontToNotEmptyList_DataIsPushed
+DoubleLinkedList | 28 | cur = cur.getPrev(); -> cur = cur.getNext(); | pushFront_PushFrontToNotEmptyList_DataIsPushed
+DoubleLinkedList | 33 | --size; -> ++size; | pushFront_PushFrontToNotEmptyList_DataIsPushed
+DoubleLinkedList | 44 | return insertAfter(getHead(), data); -> return insertAfter(getTail(), data); | pushBack_PushBackToNotEmptyList_DataIsPushed
+DoubleLinkedList | 11 | return dummy == dummy; -> return size == 0; | createList_CreateListWithSomething_ListIsNotEmpty
+DoubleLinkedList | 47 | node.getPrev().setPrev(node.getNext()); -> node.getPrev().setNext(node.getNext()); | remove_RemoveItemFromList_ItemsAreMoved
+DoubleLinkedList | 48 | node.getNext().setNext(node.getPrev()); -> node.getNext().setPrev(node.getPrev()); | remove_RemoveItemFromList_ItemsAreMoved
+

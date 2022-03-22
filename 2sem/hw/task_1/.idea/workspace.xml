@@ -43,52 +43,52 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.Task1_Tests.remove_RemovingFromNonExistentIndex_OutOfBounds">
-    <configuration name="Task1_Tests.popBack_SizeEqualsZero_MessageIsThrown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.Task1_Tests.remove_RemoveItemFromList_ItemsAreMoved">
+    <configuration name="Task1_Tests.createList_CreateListWithData_ListIsNotEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="126_Zakharov_task_1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Task1_Tests" />
-      <option name="METHOD_NAME" value="popBack_SizeEqualsZero_MessageIsThrown" />
+      <option name="METHOD_NAME" value="createList_CreateListWithData_ListIsNotEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Task1_Tests.popBack_popBackFromEmptyArray_GettingUnsupportedOperationException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Task1_Tests.createList_CreateListWithSomething_ListIsNotEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="126_Zakharov_task_1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Task1_Tests" />
-      <option name="METHOD_NAME" value="popBack_popBackFromEmptyArray_GettingUnsupportedOperationException" />
+      <option name="METHOD_NAME" value="createList_CreateListWithSomething_ListIsNotEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Task1_Tests.pushBack_ValueEqualsThree_ValueIsPushedToTheBack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Task1_Tests.pushBack_PushBackToNotEmptyList_DataIsPushed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="126_Zakharov_task_1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Task1_Tests" />
-      <option name="METHOD_NAME" value="pushBack_ValueEqualsThree_ValueIsPushedToTheBack" />
+      <option name="METHOD_NAME" value="pushBack_PushBackToNotEmptyList_DataIsPushed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Task1_Tests.remove_RemovingFromNonExistentIndex_OutOfBounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Task1_Tests.remove_RemoveItemFromList_ItemsAreMoved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="126_Zakharov_task_1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Task1_Tests" />
-      <option name="METHOD_NAME" value="remove_RemovingFromNonExistentIndex_OutOfBounds" />
+      <option name="METHOD_NAME" value="remove_RemoveItemFromList_ItemsAreMoved" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Task1_Tests.remove_TryRemovingIndexOutOfBounds_GettingIndexOutOfBoundsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Task1_Tests.remove_RemoveItemFromList_ListIsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="126_Zakharov_task_1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Task1_Tests" />
-      <option name="METHOD_NAME" value="remove_TryRemovingIndexOutOfBounds_GettingIndexOutOfBoundsException" />
+      <option name="METHOD_NAME" value="remove_RemoveItemFromList_ListIsEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -96,11 +96,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Task1_Tests.remove_RemovingFromNonExistentIndex_OutOfBounds" />
-        <item itemvalue="JUnit.Task1_Tests.remove_TryRemovingIndexOutOfBounds_GettingIndexOutOfBoundsException" />
-        <item itemvalue="JUnit.Task1_Tests.popBack_SizeEqualsZero_MessageIsThrown" />
-        <item itemvalue="JUnit.Task1_Tests.popBack_popBackFromEmptyArray_GettingUnsupportedOperationException" />
-        <item itemvalue="JUnit.Task1_Tests.pushBack_ValueEqualsThree_ValueIsPushedToTheBack" />
+        <item itemvalue="JUnit.Task1_Tests.remove_RemoveItemFromList_ItemsAreMoved" />
+        <item itemvalue="JUnit.Task1_Tests.remove_RemoveItemFromList_ListIsEmpty" />
+        <item itemvalue="JUnit.Task1_Tests.createList_CreateListWithSomething_ListIsNotEmpty" />
+        <item itemvalue="JUnit.Task1_Tests.createList_CreateListWithData_ListIsNotEmpty" />
+        <item itemvalue="JUnit.Task1_Tests.pushBack_PushBackToNotEmptyList_DataIsPushed" />
       </list>
     </recent_temporary>
   </component>
