@@ -1,0 +1,13 @@
+DynamicArray | 11 | size = 1; -> size = DefaultSize;   | createArray_createArrayWithNothing_SizeEqualsDefaultSize
+DynamicArray | 21 | if(newSize > 0) -> if(newSize < 0) | resize_NewSizeIsBiggerThenZero_SizeEqualsNewSize
+DynamicArray | 27 | newSize = size; -> size = newSize; | resize_NewSizeIsBiggerThenZero_SizeEqualsNewSize
+DynamicArray | 30 | if(index < 0 || index > size) -> if(index < 0 || index >= size) | get_GettingIndexTheNumberOfSize_OutOfBounds
+DynamicArray | 35 | if(index < 0 || index > size) -> if(index < 0 || index >= size) | set_GettingIndexTheNumberOfSize_OutOfBounds
+DynamicArray | 15 | data = new Object[capacity]; -> data = new Object[size]; | set_IndexEqualsZeroValueEqualsOne_ValueIsSet
+DynamicArray | 42 | if(capacity < size) { -> if(capacity <= size) { | insert_IndexEqualsZeroValue1EqualsOneValue2EqualsTwo_Value2IsInserted
+DynamicArray | 49 | data[size] = value; -> data[index] = value; | insert_IndexEqualsZeroValue1EqualsOneValue2Equals2_Value2IsInserted
+DynamicArray | 40 | if(index < 0 || index > size) -> if(index < 0 || index >= size) | insert_GettingIndexTheNumberOfSize_OutOfBalance
+DynamicArray | 56 | data[capacity] = value; -> data[size] = value; | pushBack_ValueEqualsThree_ValueIsPushedToTheBack
+DynamicArray | 52 | if(capacity < size) { -> if(capacity <= size) { | pushBack_ValueEqualsThree_ValueIsPushedToTheBack
+DynamicArray | 60 | if(size < 0) -> if(size <= 0) | popBack_SizeEqualsZero_MessageIsThrown
+DynamicArray | 66 | if(index < 0 || index > size) -> if(index < 0 || index >= size)
