@@ -43,52 +43,51 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.Task1_Tests.remove_RemoveItemFromList_ItemsAreMoved">
-    <configuration name="Task1_Tests.createList_CreateListWithData_ListIsNotEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.Task1_Tests">
+    <configuration name="Task1_Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="126_Zakharov_task_1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Task1_Tests" />
-      <option name="METHOD_NAME" value="createList_CreateListWithData_ListIsNotEmpty" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task1_Tests.get_GetIndexOfItem_IndexIsGotten" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="126_Zakharov_task_1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Task1_Tests" />
+      <option name="METHOD_NAME" value="get_GetIndexOfItem_IndexIsGotten" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Task1_Tests.createList_CreateListWithSomething_ListIsNotEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Task1_Tests.insertListAfter_insertListAfterSecondItem_ItemsOfTheFirstListAreMoved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="126_Zakharov_task_1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Task1_Tests" />
-      <option name="METHOD_NAME" value="createList_CreateListWithSomething_ListIsNotEmpty" />
+      <option name="METHOD_NAME" value="insertListAfter_insertListAfterSecondItem_ItemsOfTheFirstListAreMoved" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Task1_Tests.pushBack_PushBackToNotEmptyList_DataIsPushed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Task1_Tests.insertList_insertListBeforeFirstItem_AllElementsAreCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="126_Zakharov_task_1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Task1_Tests" />
-      <option name="METHOD_NAME" value="pushBack_PushBackToNotEmptyList_DataIsPushed" />
+      <option name="METHOD_NAME" value="insertList_insertListBeforeFirstItem_AllElementsAreCorrect" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Task1_Tests.remove_RemoveItemFromList_ItemsAreMoved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Task1_Tests.pushFront_PushFrontToEmptyList_DataIsPushed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="126_Zakharov_task_1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Task1_Tests" />
-      <option name="METHOD_NAME" value="remove_RemoveItemFromList_ItemsAreMoved" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Task1_Tests.remove_RemoveItemFromList_ListIsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="126_Zakharov_task_1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Task1_Tests" />
-      <option name="METHOD_NAME" value="remove_RemoveItemFromList_ListIsEmpty" />
+      <option name="METHOD_NAME" value="pushFront_PushFrontToEmptyList_DataIsPushed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -96,11 +95,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Task1_Tests.remove_RemoveItemFromList_ItemsAreMoved" />
-        <item itemvalue="JUnit.Task1_Tests.remove_RemoveItemFromList_ListIsEmpty" />
-        <item itemvalue="JUnit.Task1_Tests.createList_CreateListWithSomething_ListIsNotEmpty" />
-        <item itemvalue="JUnit.Task1_Tests.createList_CreateListWithData_ListIsNotEmpty" />
-        <item itemvalue="JUnit.Task1_Tests.pushBack_PushBackToNotEmptyList_DataIsPushed" />
+        <item itemvalue="JUnit.Task1_Tests" />
+        <item itemvalue="JUnit.Task1_Tests.insertList_insertListBeforeFirstItem_AllElementsAreCorrect" />
+        <item itemvalue="JUnit.Task1_Tests.insertListAfter_insertListAfterSecondItem_ItemsOfTheFirstListAreMoved" />
+        <item itemvalue="JUnit.Task1_Tests.get_GetIndexOfItem_IndexIsGotten" />
+        <item itemvalue="JUnit.Task1_Tests.pushFront_PushFrontToEmptyList_DataIsPushed" />
       </list>
     </recent_temporary>
   </component>

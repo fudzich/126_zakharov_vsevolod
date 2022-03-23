@@ -141,39 +141,39 @@ public class Task1_Tests extends Assert {
     @Test
     public void pushFront_PushFrontToEmptyList_DataIsPushed() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
-        list.pushFront(1);
+        list.pushFront(0);
         Node<Integer> Head = (Node<Integer>) list.getHead();
         Node<Integer> Tail = (Node<Integer>) list.getTail();
-        assertEquals(1, Head.getData().intValue());
-        assertEquals(1, Tail.getData().intValue());
+        assertEquals(0, Head.getData().intValue());
+        assertEquals(0, Tail.getData().intValue());
     }
     @Test
     public void pushFront_PushFrontToNotEmptyList_DataIsPushed() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(0);
         list.pushFront(1);
         list.pushFront(2);
-        list.pushFront(3);
-        assertEquals(2, getIntDataValue(list.get(1)));
+        assertEquals(1, getIntDataValue(list.get(1)));
     }
     @Test
     public void pushBack_PushBackToEmptyList_DataIsPushed() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
-        list.pushBack(1);
+        list.pushBack(0);
         Node<Integer> Head = (Node<Integer>) list.getHead();
         Node<Integer> Tail = (Node<Integer>) list.getTail();
-        assertEquals(1, Head.getData().intValue());
-        assertEquals(1, Tail.getData().intValue());
+        assertEquals(0, Head.getData().intValue());
+        assertEquals(0, Tail.getData().intValue());
     }
     @Test
     public void pushBack_PushBackToNotEmptyList_DataIsPushed() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushBack(0);
         list.pushBack(1);
         list.pushBack(2);
-        list.pushBack(3);
         Node<Integer> Head = (Node<Integer>) list.getHead();
         Node<Integer> Tail = (Node<Integer>) list.getTail();
-        assertEquals(1, Head.getData().intValue());
-        assertEquals(3, Tail.getData().intValue());
+        assertEquals(0, Head.getData().intValue());
+        assertEquals(2, Tail.getData().intValue());
     }
     @Test
     public void createList_CreateListWithSomething_ListIsNotEmpty(){
@@ -191,13 +191,79 @@ public class Task1_Tests extends Assert {
     @Test
     public void remove_RemoveItemFromList_ItemsAreMoved(){
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
-        Node<Integer> Item1 = (Node<Integer>) list.pushBack(1);
-        Node<Integer> Item2 = (Node<Integer>) list.pushBack(2);
-        Node<Integer> Item3 = (Node<Integer>) list.pushBack(3);
+        Node<Integer> Item1 = (Node<Integer>) list.pushBack(0);
+        Node<Integer> Item2 = (Node<Integer>) list.pushBack(1);
+        Node<Integer> Item3 = (Node<Integer>) list.pushBack(2);
         list.remove(Item1);
         Node<Integer> Head = (Node<Integer>) list.getHead();
         Node<Integer> Tail = (Node<Integer>) list.getTail();
-        assertEquals(2, Head.getData().intValue());
-        assertEquals(3, Tail.getData().intValue());
+        assertEquals(1, Head.getData().intValue());
+        assertEquals(2, Tail.getData().intValue());
     }
+    @Test
+    public void get_GetIndexMoreThenSize_OutOfBounds(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushBack(0);
+        try {
+            list.get(34);
+            fail();
+        } catch (IndexOutOfBoundsException e) {
+            assertEquals("index out of bounds", e.getMessage());
+        }
+    }
+    @Test
+    public void get_GetIndexAsSize_OutOfBounds(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushBack(0);
+        try {
+            list.get(1);
+            fail();
+        } catch (IndexOutOfBoundsException e) {
+            assertEquals("index out of bounds", e.getMessage());
+        }
+    }
+    @Test
+    public void get_GetIndexOfItem_IndexIsGotten(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushBack(0);
+        Node<Integer> Item = (Node<Integer>) list.get(0);
+        assertEquals(0, Item.getData().intValue());
+    }
+    @Test
+    public void insertListAfter_insertListAfterSecondItem_ItemsOfTheFirstListAreMoved() {
+        DoubleLinkedList<Integer> list1 = new DoubleLinkedList<>();
+        list1.pushFront(0);
+        list1.pushFront(1);
+        list1.pushFront(2);
+        DoubleLinkedList<Integer> list2 = new DoubleLinkedList<>();
+        list2.pushFront(3);
+        list2.pushFront(4);
+        list2.pushFront(5);
+        list1.insertListAfter(list1.get(1), list2);
+        assertEquals(0, getIntDataValue(list1.get(0)));
+        assertEquals(1, getIntDataValue(list1.get(1)));
+        assertEquals(3, getIntDataValue(list1.get(2)));
+        assertEquals(4, getIntDataValue(list1.get(3)));
+        assertEquals(5, getIntDataValue(list1.get(4)));
+        assertEquals(2, getIntDataValue(list1.get(5)));
+    }
+    @Test
+    public void insertList_insertListBeforeFirstItem_AllElementsAreCorrect() {
+        DoubleLinkedList<Integer> list1 = new DoubleLinkedList<>();
+        list1.pushFront(0);
+        list1.pushFront(1);
+        list1.pushFront(2);
+        DoubleLinkedList<Integer> list2 = new DoubleLinkedList<>();
+        list2.pushFront(3);
+        list2.pushFront(4);
+        list2.pushFront(5);
+        list1.insertListBefore(list1.get(0), list2);
+        assertEquals(3, getIntDataValue(list1.get(0)));
+        assertEquals(4, getIntDataValue(list1.get(1)));
+        assertEquals(5, getIntDataValue(list1.get(2)));
+        assertEquals(0, getIntDataValue(list1.get(3)));
+        assertEquals(1, getIntDataValue(list1.get(4)));
+        assertEquals(2, getIntDataValue(list1.get(5)));
+    }
+
 }

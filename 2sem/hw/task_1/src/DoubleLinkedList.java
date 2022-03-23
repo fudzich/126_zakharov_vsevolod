@@ -21,7 +21,7 @@ public class DoubleLinkedList<T> {
     }
 
     public ListNode<T> get(int index) {
-        if(index < 0 || index > size)
+        if(index < 0 || index >= size)
             throw new IndexOutOfBoundsException("index out of bounds");
         ListNode<T> cur = getHead();
         for(int i = 0; i < index; ++i)
@@ -52,23 +52,23 @@ public class DoubleLinkedList<T> {
     public void insertListAfter(ListNode<T> node, DoubleLinkedList<T> list) {
         if(list.isEmpty())
             return;
-        list.getHead().setNext(node);
-        list.getTail().setPrev(node.getNext());
+        list.getHead().setPrev(node);
+        list.getTail().setNext(node.getNext());
         node.getNext().setPrev(list.getTail());
         node.setNext(list.getHead());
 
         list.dummy.setNext(list.dummy);
         list.dummy.setPrev(list.dummy);
-    }
+        size += list.getSize();}
     public void insertListBefore(ListNode<T> node, DoubleLinkedList<T> list) {
         if(list.isEmpty())
             return;
-        list.getHead().setNext(node.getPrev());
-        list.getTail().setPrev(node);
+        list.getHead().setPrev(node.getPrev());
+        list.getTail().setNext(node);
         node.getPrev().setNext(list.getHead());
         node.setPrev(list.getTail());
 
         list.dummy.setNext(list.dummy);
         list.dummy.setPrev(list.dummy);
-    }
+        size += list.getSize();}
 }
