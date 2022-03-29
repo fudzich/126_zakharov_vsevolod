@@ -2,9 +2,6 @@ package tests;
 
 import org.junit.*;
 import  core.*;
-import ProgramRun.Run;
-
-import java.util.ArrayList;
 
 public class Tests extends Assert {
 

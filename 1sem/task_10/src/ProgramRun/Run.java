@@ -7,10 +7,6 @@ import java.util.Scanner;
 
 public class Run {
 
-//    static int pNumber, total;
-//    static boolean type;
-//    static String dNumber, date, dogovorNumber;
-
     public static void main(String[] args){
         ArrayList<Dogovor> ListOfDogovors = new ArrayList<>();
         ArrayList<Payment> ListOfPayments = new ArrayList<>();
@@ -39,8 +35,8 @@ public class Run {
                 case 4 -> findTotalPaymentViaDogovor(ListOfPayments);
                 case 5 -> ListOfPayments = deletePaymentViaNumberDNumberAndDate(ListOfPayments);
                 case 6 -> showListOfDogovorsWithTotalPayments(ListOfDogovors, ListOfPayments);
-                case 8 -> showListOfDogovors(ListOfDogovors);
                 case 7 -> showListOfPayments(ListOfPayments);
+                case 8 -> showListOfDogovors(ListOfDogovors);
             }
         }
     }
@@ -57,7 +53,6 @@ public class Run {
         String dogovorNumber = AddDogovorNumber();
         String date = VvodPaymentdate();
         for(int i=0;i<listOfPayments.size();i++){
-            //Payment pay = listOfPayments.get(i);
             if((listOfPayments.get(i).GetDogovorNumber().equals(dogovorNumber)) && (listOfPayments.get(i).GetNumber() == paymentNumber) &&
                     (listOfPayments.get(i).GetDate().equals(date))){
                 listOfPayments.remove(i);
@@ -138,7 +133,6 @@ public class Run {
         boolean type = VvodPaymentType();
         String dogovorNumber = VvodPaymentDogovorNumber();
         String date = VvodPaymentdate();
-        //VvodPayment(total,pNumber,type,dogovorNumber,date);
         Payment payment = new Payment(total, pNumber, type, dogovorNumber, date);
         ListOfPayments.add(payment);
         return ListOfPayments;

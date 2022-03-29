@@ -1,7 +1,5 @@
 package core;
 
-import java.util.HashMap;
-
 public class Dogovor {
 
     private String number;
