@@ -1,0 +1,65 @@
+Offset_hash_1
+x x x x x x 58 x x x x x x
+x x x x x x 58 x x 87 x x x
+x x x x 82 x 58 x x 87 x x x
+x x x x 82 x 58 19 x 87 x x x
+78 x x x 82 x 58 19 x 87 x x x
+78 x x x 82 x 58 19 x 87 88 x x
+78 x x x 82 x 58 19 x 87 88 x x
+78 x x x 82 x 58 19 x 87 88 76 x
+78 92 x x 82 x 58 19 x 87 88 76 x
+78 92 x 3 82 x 58 19 x 87 88 76 x
+78 92 x 3 82 57 58 19 x 87 88 76 x
+78 92 14 3 82 57 58 19 x 87 88 76 x
+
+Offset_hash_2
+x x x x x x x x x 85 x x x x x x x x x
+x x x 41 x x x x x 85 x x x x x x x x x
+x x x 41 x x x x x 85 x x x x x x 73 x x
+x x x 41 x x x x x 85 x x x x 90 x 73 x x
+x x x 41 x 43 x x x 85 x x x x 90 x 73 x x
+x x x 41 x 43 x x x 85 x x x x 90 x 73 54 x
+x x x 41 x 43 x x 65 85 x x x x 90 x 73 54 x
+x x x 41 x 43 x x 65 85 x x x 70 90 x 73 54 x
+x x x 41 x 43 62 x 65 85 x x x 70 90 x 73 54 x
+x x x 41 60 43 62 x 65 85 x x x 70 90 x 73 54 x
+x x x 41 60 43 62 x 65 85 x x x 70 90 89 73 54 x
+x x x 41 60 43 62 x 65 85 x x 31 70 90 89 73 54 x
+x x x 41 60 43 62 x 65 85 10 x 31 70 90 89 73 54 x
+x x x 41 60 43 62 4 65 85 10 x 31 70 90 89 73 54 x
+x x x 41 60 43 62 4 65 85 10 67 31 70 90 89 73 54 x
+x x x 41 60 43 62 4 65 x 10 67 31 70 90 89 73 54 x
+x x x 41 60 43 62 4 65 x 10 x 31 70 90 89 73 54 x
+x x x 41 60 43 62 4 65 x 10 x 31 70 90 x 73 54 x
+x x x 41 60 43 4 x 65 x 10 x 31 70 90 x 73 54 x
+x x x 41 60 43 4 x 65 x x x 31 70 90 x 73 54 x
+
+Offset_hash_3
+x x x x x x x x 65 x x x x x x x x x x
+x x x x x x x x 65 x x x x 89 x x x x x
+x 20 x x x x x x 65 x x x x 89 x x x x x
+x 20 x x x 43 x x 65 x x x x 89 x x x x x
+x 20 x x x 43 x x 65 x x x x 89 x x x 93 x
+x 20 x x x 43 81 x 65 x x x x 89 x x x 93 x
+x 20 x x x 43 81 x 65 x x x x 89 x x x 93 36
+x 20 x 41 x 43 81 x 65 x x x x 89 x x x 93 36
+76 20 x 41 x 43 81 x 65 x x x x 89 x x x 93 36
+76 20 19 41 x 43 81 x 65 x x x x 89 x x x 93 36
+76 20 19 41 x 43 81 x 65 x x x x 89 x x 16 93 36
+76 20 19 41 42 43 81 x 65 x x x x 89 x x 16 93 36
+76 20 19 41 42 43 81 x 65 x x x x 89 x x x 93 36
+76 20 19 41 42 43 81 x 65 x x x x x x x x 93 36
+76 20 19 x 42 43 81 x 65 x x x x x x x x 93 36
+76 20 19 x 42 43 81 x 65 x x x x 51 x x x 93 36
+76 20 19 x 42 43 81 x 65 x x 11 x 51 x x x 93 36
+76 20 19 x 42 43 81 x 65 x x 11 x 51 33 x x 93 36
+76 20 19 x 42 43 81 x x x x 11 x 51 33 x x 93 36
+76 20 19 x 42 43 81 x x x x x x 51 33 x x 93 36
+76 20 19 56 42 43 81 x x x x x x 51 33 x x 93 36
+76 20 19 56 42 43 81 x x x x x x 51 33 x x 93 36
+76 20 19 56 42 43 81 80 x x x x x 51 33 x x 93 36
+76 20 19 56 42 43 81 x x x x x x 51 33 x x 93 36
+76 20 19 x 42 43 81 x x x x x x 51 33 x x 93 36
+76 20 19 x 42 43 x x x x x x x 51 33 x x 93 36
+76 20 19 x 42 43 x x x x x x x 51 x x x 93 36
+19 20 x x 42 43 x x x x x x x 51 x x x 93 36
